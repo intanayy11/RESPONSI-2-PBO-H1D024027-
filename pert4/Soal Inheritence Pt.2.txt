@@ -1,0 +1,54 @@
+[Deskripsi]
+Sebuah pusat perbelanjaan bernama "BelanjaRek" sedang mengembangkan sistem pencatatan pelanggan yang dapat mengenali perbedaan antara pelanggan biasa dan pelanggan yang sudah terdaftar sebagai anggota. Untuk membuat struktur data yang lebih rapi dan mudah dikembangkan, tim IT memutuskan menggunakan konsep pewarisan (inheritance).
+
+[Dasar Informasi (Superclass)]
+Semua pelanggan yang tercatat pada sistem dikategorikan sebagai "Customer".
+Setiap Customer menyimpan data penting berikut:
+1. Nama lengkap (String)
+2. Nomor Identitas Customer (String)
+3. Total Belanja yang pernah dilakukan (int)
+
+Customer memiliki satu kemampuan utama:
+- Menampilkan Informasi Dasar: Menampilkan nama, ID customer, dan total belanja.
+
+[Informasi Khusus (Subclass)]
+Toko juga memiliki kelompok pelanggan premium yang disebut sebagai "Member".
+Member merupakan bagian dari Customer, namun memiliki informasi tambahan:
+1. Poin Reward (int)
+2. Level Keanggotaan (String), misalnya: Silver, Gold, Platinum
+
+Member juga memiliki perilaku yang berbeda:
+- Menampilkan Informasi Detail:
+  Ketika menampilkan informasi, Member harus memanggil terlebih dahulu informasi dasar Customer menggunakan super.tampilkanInfo(), lalu menambahkan data poin dan level.
+
+[Tugas Implementasi]
+Berdasarkan informasi di atas, buatlah struktur class sebagai berikut:
+
+1. Buat class Customer sebagai parent.
+2. Buat class Member yang mewarisi Customer.
+3. Lakukan overriding method tampilkanInfo() dan panggil versi parent dengan super.tampilkanInfo().
+4. Gunakan super(...) pada constructor subclass.
+
+[Data Uji]
+
+Customer:
+- Nama: Budi Santoso
+- ID: CST-001
+- Total Belanja: 500000
+
+Member:
+- Nama: Siti Aminah
+- ID: MBR-110
+- Total Belanja: 1250000
+- Poin: 240
+- Level: Gold
+
+[Output Contoh yang Diinginkan]
+
+=== DATA CUSTOMER BELANJAKU ===
+Status: Customer Biasa
+Nama: Budi Santoso | ID: CST-001 | Total Belanja: Rp 500000
+
+Status: Member
+Nama: Siti Aminah | ID: MBR-110 | Total Belanja: Rp 1250000
+Poin Reward: 240 | Level: Gold

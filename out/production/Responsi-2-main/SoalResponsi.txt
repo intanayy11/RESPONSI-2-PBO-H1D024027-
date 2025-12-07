@@ -1,0 +1,82 @@
+I. Studi Kasus: Sistem Kendali Armada Kendaraan Galaksi
+
+Pada tahun 2140, Federasi Manusia Antar Galaksi (Intergalactic Human Federation) mengelola berbagai armada kendaraan canggih yang digunakan untuk misi perang, eksplorasi planet baru, dan perjalanan jarak jauh. Selama ini, pencatatan status dan perilaku setiap kendaraan masih dilakukan secara manual oleh teknisi galaksi, sehingga sering terjadi kesalahan dan ketidaksinkronan data.
+
+Untuk itu, Federasi meminta seorang programmer sistem antariksa untuk membuat sebuah kerangka dasar pengelolaan kendaraan menggunakan konsep abstract class dan polimorfisme, sehingga semua jenis kendaraan bisa memiliki struktur dasar yang sama tetapi perilakunya dapat berbeda-beda sesuai karakteristiknya.	
+
+II. Informasi Kendaraan Galaksi
+
+Federasi ingin sebuah abstract class bernama KendaraanGalaksi yang menjadi fondasi bagi semua kendaraan.
+Class ini wajib memiliki:
+- Atribut dasar kendaraan (nama, energi, kapasitas penumpang)
+- Method umum untuk menampilkan status
+- Method abstrak yang menentukan bagaimana kendaraan:
+  - Mengaktifkan mesin
+  - Menjelajah ruang galaksi
+  - Mengisi energi
+Karena setiap jenis kendaraan memiliki cara kerja yang berbeda, method-method tersebut harus di-override oleh subclass.
+
+III. Jenis Kendaraan 1 – Pesawat Tempur "Astra-Fury"
+
+Federasi memiliki armada pesawat tempur canggih yang digunakan untuk melindungi kolonisasi manusia.
+Ciri-cirinya:
+- Memiliki rudal sebagai senjata
+- Konsumsi energi 3% per kilometer
+- Hanya dapat menembakkan rudal jika jumlahnya mencukupi
+- Tidak boleh dinyalakan jika energi di bawah 20%
+Tugas programmer:
+- Membuat subclass PesawatTempur
+- Mengimplementasikan cara pesawat tempur mengaktifkan mesin, menjelajah, mengisi energi, dan menembak rudal
+
+IV. Jenis Kendaraan 2 – Kapal Eksplorasi "Voyager X"
+
+Selain pesawat tempur, Federasi juga memiliki kapal eksplorasi besar yang digunakan untuk penelitian planet baru.
+Ciri-cirinya:
+- Memiliki modul scan untuk menganalisis planet (level 1–5)
+- Konsumsi energi 2% per kilometer (lebih efisien)
+- Tidak dapat memulai misi jika energi di bawah 15%
+- Dapat melakukan scan planet untuk mengumpulkan data ilmiah
+Tugas programmer:
+- Membuat subclass KapalEksplorasi
+- Mengimplementasikan seluruh abstract method dan menambahkan fitur scanPlanet()
+
+V. Data Uji Coba
+
+Programmer diminta membuat sebuah class UjiGalaksi untuk melakukan pengujian terhadap kedua jenis kendaraan tersebut.
+
+Buatlah objek berikut:
+1. Pesawat Tempur – "Astra-Fury"
+   - Kapasitas: 2 orang
+   - Jumlah rudal awal: 8
+Lakukan urutan aksi:
+- Aktifkan mesin
+- Pesawat menjelajah sejauh 10 km
+- Pesawat mencoba menjelajah 30 km lagi (cek apakah energinya cukup)
+- Pesawat menembakkan 3 rudal
+- Tampilkan status kendaraan
+
+2. Kapal Eksplorasi – "Voyager X"
+   - Kapasitas: 10 orang
+   - Modul scan: level 4
+Lakukan urutan aksi:
+- Aktifkan mesin
+- Kapal menjelajah sejauh 15 km
+- Kapal melakukan scan pada planet "Kepler-442b"
+- Tampilkan status kendaraan
+
+VI. Output
+
+=== UJI SISTEM KENDARAAN GALAKSI ===
+
+--- PESAWAT TEMPUR ---
+Mesin pesawat tempur diaktifkan.
+Pesawat tempur menjelajah sejauh 10 km.
+Energi tidak mencukupi untuk menjelajah sejauh 30 km.
+Menembakkan 3 rudal!
+Astra-Fury | Energi: 70% | Kapasitas: 2 orang
+
+--- KAPAL EKSPLORASI ---
+Kapal eksplorasi siap berangkat!
+Kapal eksplorasi menjelajah sejauh 15 km.
+Melakukan scan pada planet Kepler-442b dengan modul level 4.
+Voyager X | Energi: 70% | Kapasitas: 10 orang

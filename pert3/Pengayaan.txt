@@ -1,0 +1,29 @@
+Pertanyaan Refleksi
+Setelah menyelesaikan kode, jawab pertanyaan berikut:
+
+1. Apa fungsi keyword 'extends' dalam deklarasi class Java?
+2. Jelaskan perbedaan antara Method Overloading (yang ada di latihan sebelumnya) dengan Method Overriding (yang ada di latihan ini)!
+3. Apa kegunaan keyword 'super' di dalam constructor subclass (Manajer)?
+4. Jika variabel di class Karyawan diubah access modifier-nya menjadi 'private', apa yang akan terjadi pada class Manajer? Bagaimana
+solusinya?
+5. Mengapa kita perlu menggunakan Inheritance? Apa keuntungan utamanya dibandingkan membuat dua class yang terpisah sama sekali
+(misal class Karyawan dan class Manajer dibuat terpisah tanpa hubungan)?
+
+Jawaban:
+1. Fungsi Keyword extends, digunakan untuk menunjukkan bahwa sebuah class merupakan subclass yang mewarisi atribut dan method dari superclass.
+Dengan menggunakan extends, subclass dapat menggunakan kembali kode dari parent class tanpa perlu menuliskannya ulang.
+
+2. Method overloading adalah kondisi ketika beberapa method memiliki nama yang sama, namun parameter yang berbeda dalam satu class. Sedangkan
+method overriding adalah kondisi ketika subclass mendefinisikan ulang method milik superclass dengan signature yang sama untuk
+memberikan perilaku yang berbeda.
+
+3. Keyword super digunakan untuk memanggil constructor milik superclass agar variabel yang didefinisikan pada parent class dapat
+diinisialisasi dengan benar sebelum subclass menambahkan atributnya sendiri.
+
+4. Jika variabel di class Karyawan diubah menjadi private, maka subclass Manajer tidak dapat mengaksesnya secara langsung.Solusinya
+adalah menggunakan method getter di class Karyawan atau mengubah access modifier menjadi protected agar tetap
+bisa diakses oleh subclass.
+
+5. Inheritance digunakan untuk: mengurangi duplikasi kode, mempermudah pengelolaan dan pengembangan program, meningkatkan keterbacaan
+struktur program. Dengan inheritance, subclass dapat menggunakan kembali kode dari superclass dan hanya menambahkan atau memodifikasi
+berilaku tertentu sesuai kebutuhan.

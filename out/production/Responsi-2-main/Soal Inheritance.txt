@@ -1,0 +1,45 @@
+[Deskripsi Kasus]
+Sebuah perusahaan startup bernama "TechMaju" ingin mengelompokkan data pegawainya dengan lebih terstruktur menggunakan konsep pewarisan (inheritance). 
+
+[Informasi Dasar (Superclass)]
+Semua orang yang bekerja di sana disebut sebagai "Karyawan". Setiap Karyawan memiliki data dasar:
+1. Nama (teks)
+2. Gaji Pokok (bilangan desimal/double)
+
+Karyawan memiliki kemampuan standar:
+- Menampilkan Info: Menampilkan Nama dan Gaji Pokok.
+
+[Informasi Tambahan (Subclass)]
+Ada tipe karyawan khusus yaitu "Manajer". Manajer adalah seorang Karyawan, namun memiliki tambahan hak istimewa berupa:
+1. Tunjangan (bilangan desimal/double)
+
+Manajer memiliki perilaku yang sedikit berbeda (Overriding):
+- Menampilkan Info: Menampilkan Nama, Gaji Pokok, Tunjangan, dan Total Gaji (Gaji Pokok + Tunjangan).
+
+[Tugas Anda]
+Implementasikan konsep Inheritance dengan ketentuan:
+1. Buat class parent `Karyawan`.
+2. Buat class child `Manajer` yang mewarisi (extends) `Karyawan`.
+3. Gunakan keyword `super` untuk memanggil constructor atau method dari parent class jika diperlukan.
+
+[Data Uji Coba]
+Di dalam class main (UjiKaryawan), buatlah objek berikut:
+
+1. Objek Karyawan (Staf Biasa):
+   - Nama: "Budi Santoso"
+   - Gaji Pokok: Rp 4.000.000
+
+2. Objek Manajer:
+   - Nama: "Siti Aminah"
+   - Gaji Pokok: Rp 6.000.000
+   - Tunjangan: Rp 2.500.000
+
+[Output yang Diharapkan]
+
+=== DATA KARYAWAN TECHMAJU ===
+Status: Karyawan Biasa
+Nama: Budi Santoso | Gaji Pokok: Rp 4000000.0
+
+Status: Manajer
+Nama: Siti Aminah | Gaji Pokok: Rp 6000000.0 | Tunjangan: Rp 2500000.0
+Total Pendapatan: Rp 8500000.0

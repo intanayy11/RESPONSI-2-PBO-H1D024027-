@@ -1,0 +1,31 @@
+Pertanyaan Refleksi
+Setelah menyelesaikan kode, jawab pertanyaan berikut:
+
+Apa yang dimaksud dengan constructor overloading dalam pemrograman berorientasi objek?
+Bagaimana cara Java membedakan constructor yang memiliki nama sama namun parameter berbeda?
+Apa perbedaan antara mengakses variabel secara langsung (misalnya: objek.variabel = nilai) dengan menggunakan method
+setter?
+Jelaskan konsep encapsulation dan bagaimana method dapat membantu melindungi data dalam sebuah class!
+Mengapa constructor tidak memiliki return type, bahkan tidak menggunakan kata kunci void?
+
+Jawaban:
+Constructor overloading adalah kondisi ketika sebuah class memiliki lebih dari satu constructor dengan jumlah atau tipe
+parameter yang berbeda. Constructor overloading digunakan untuk memberikan fleksibilitas dalam pembuatan objek, sehingga
+objek dapat dibuat dengan data yang berbeda-beda sesuai kondisi yang tersedia. Pada program ini, constructor overloading
+memungkinkan pembuatan objek BarangMusik baik dengan data minimal maupun data lengkap.
+
+Java membedakan constructor berdasarkan signature, yaitu kombinasi dari jumlah, urutan, dan tipe parameter. Selama
+parameter yang digunakan berbeda, Java dapat menentukan constructor mana yang dipanggil saat objek dibuat, meskipun nama
+constructor sama dengan nama class.
+
+Mengakses variabel secara langsung memungkinkan perubahan nilai tanpa kontrol, sehingga berisiko menimbulkan kesalahan
+data. Sebaliknya, penggunaan method setter memberikan kontrol terhadap perubahan nilai, memungkinkan adanya validasi
+serta menjaga keamanan dan konsistensi data sesuai konsep pemrograman berorientasi objek.
+
+Encapsulation adalah konsep OOP yang menyatukan data dan method dalam satu class serta membatasi akses langsung terhadap
+data. Dengan menggunakan method seperti setter dan getter, data dalam class tidak dapat diubah secara sembarangan,
+sehingga membantu melindungi integritas data dan meningkatkan keamanan program.
+
+Constructor tidak memiliki return type karena fungsinya bukan untuk mengembalikan nilai, melainkan untuk melakukan
+inisialisasi objek saat pertama kali dibuat. Jika constructor memiliki return type, maka Java akan memperlakukannya
+sebagai method biasa, bukan sebagai constructor.

@@ -1,0 +1,68 @@
+Sebuah toko alat musik bernama NadaKita baru saja melakukan digitalisasi inventaris. Sebagian besar barang masih dicatat manual, sehingga pemilik toko ingin seorang programmer membuat sistem sederhana untuk mendata alat musik yang dijual.
+Informasi Barang Musik
+Setiap barang musik di toko memiliki informasi sebagai berikut:
+
+Kode unik barang - penanda identitas barang (tipe data teks)
+Nama alat musik - nama produk (tipe data teks)
+Harga satuan - harga per unit dalam rupiah (tipe data bilangan desimal)
+Jumlah stok - banyaknya barang yang tersedia (tipe data bilangan bulat)
+
+Cara Mencatat Barang
+Karena beberapa barang datang dari distributor yang berbeda dengan kelengkapan informasi yang berbeda-beda, diperlukan tiga cara untuk membuat objek barang baru:
+
+Cara pertama: Hanya mengetahui kode dan nama barang
+
+Harga otomatis diset 0.0
+Stok otomatis diset 0
+
+
+Cara kedua: Mengetahui kode, nama, dan harga barang
+
+Stok otomatis diset 0
+
+
+Cara ketiga: Mengetahui kode, nama, harga, dan stok barang (data lengkap)
+
+Kemampuan Sistem
+Pemilik toko juga ingin setiap barang memiliki kemampuan berikut:
+
+Mengubah harga barang - untuk update harga sesuai kondisi pasar
+Menambah stok - ketika ada barang masuk dari distributor
+Menampilkan informasi lengkap - dengan format:
+
+   Alat musik [nama] | Kode: [kode] | Harga: Rp [harga] | Stok: [stok] unit
+Data Uji Coba
+Buatlah dua objek barang dalam class UjiBarang:
+Barang Pertama: Gitar Akustik
+
+Saat pencatatan awal hanya diketahui:
+
+Kode: "GTR-001"
+Nama: "Gitar Akustik Yamaha"
+
+
+Kemudian:
+
+Atur harga menjadi Rp 1.500.000
+Tambahkan stok sebanyak 5 unit
+
+
+
+Barang Kedua: Drum Set
+
+Data lengkap sudah diketahui sejak awal:
+
+Kode: "DRM-001"
+Nama: "Drum Set Pearl"
+Harga: Rp 8.500.000
+Stok: 3 unit
+
+
+
+Setelah semua data diatur, tampilkan informasi kedua barang tersebut.
+
+Output yang Diharapkan
+
+=== INVENTARIS TOKO NADAKITA ===
+Alat musik Gitar Akustik Yamaha | Kode: GTR-001 | Harga: Rp 1500000.0 | Stok: 5 unit
+Alat musik Drum Set Pearl | Kode: DRM-001 | Harga: Rp 8500000.0 | Stok: 3 unit

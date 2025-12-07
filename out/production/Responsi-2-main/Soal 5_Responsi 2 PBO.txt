@@ -1,0 +1,163 @@
+﻿Sistem Data Mesin dengan Polimorfisme
+Jangan lupa berdoa sebelum memulai responsi, minta restu orang tua, dan solat isya
+
+
+Sebuah perusahaan bernama MajuJayaForza Engineering sedang membangun sistem inventaris mesin. Mereka ingin pendataan mesin dilakukan menggunakan konsep inheritance dan polimorfisme.
+1. Class defaultMesin (Class Induk)
+Semua mesin memiliki data dasar yang sama, sehingga dibuat class induk:
+
+
+Class defaultMesin
+Memiliki atribut:
+* namaMesin (String)
+* tenagaHP (int)
+method:
+* Void tampilInfo()
+Menampilkan:
+Mesin [namaMesin] | Tenaga: [tenagaHP] HP
+* double nilaiPerforma()
+Perhitungan standar (default)
+tenagaHP * 1.0
+* String kategoriMesin()
+Mengembalikan nilai umum:
+return "Mesin Umum";
+
+
+2. Subclass mesinMotor (extends defaultMesin)
+Mesin untuk kendaraan motor.
+Atribut tambahan:
+* tipeMotor (String) – contoh: “Sport”, “Matic”, “Bebek”
+Override:
+* tampilInfo():
+* nilaiPerforma():
+performa = tenagaHP x 1,2
+* kategoriMesin():
+return "Mesin Motor";
+Method unik:
+   * suaraMesin():
+"Brummm! Mesin motor menyala!"
+
+
+3. Subclass mesinTraktor (extends defaultMesin)
+Atribut tambahan:
+   * kapasitasTarik (double)
+Override: 
+   * tampilInfo()
+   * nilaiPerforma():
+performa = (tenagaHP x 0.9) + (kapasitasTarik x 10)
+   * kategoriMesin():
+return "Mesin Traktor";
+Method unik:
+   * suaraMesin():
+"GGGRRRR! Hidup mesinnn!"
+
+
+4. Subclass mesinTraktorListrik (extends mesinTraktor)
+Atribut tambahan:
+   * kapasitasBaterai (kWh)
+Override: 
+   * tampilInfo()
+   * nilaiPerforma():
+performa = (tenagaHP x 1.1) + (kapasitasBaterai x 5)
+   * kategoriMesin():
+return "Mesin Traktor Listrik";
+Method unik:
+   * suaraMesin():
+"Bzzzzz! Mesin traktor listrik aktif!"
+
+
+5. Class analisisMesin (Uji Program)
+   1. Buat array berisi 5 mesin dengan tipe:
+   1. mesinMotor
+   * Nama = "Honda Supra X"
+   * HP = 125
+   * Tipe = "Bebek"
+   2. mesinTraktor
+   * Nama = "Kubota MX5200"
+   * HP = 520
+   * Kapasitas Tarik = 5.0
+   3. mesinTraktorListrik
+   * Nama = “EcoTrac Z900”, 
+   * HP = 300
+   * kapasitasTarik = 4.2
+   * kapasitasBaterai = 70
+   4. mesinMotor
+   * Nama = "Yamaha R25"
+   * HP = 250
+   * Tipe = "Sport"
+   5. mesinTraktorListrik
+   * Nama = “Volta FarmX”, 
+   * HP = 200
+   * kapasitasTarik = 3.5
+   * kapasitasBaterai = 80
+
+
+
+
+   2. Loop dan panggil
+   * tampilInfo()
+   * kategoriMesin()
+   * nilaiPerforma()
+
+
+   3. Panggil method suaraMesin()
+Ini harus dilakukan dengan polimorfisme:
+   * hanya mesin yang punya method ini (Motor, Traktor, TraktorListrik)
+   * lakukan pengecekan downcasting menggunakan instanceof
+Contoh output:
+Honda Supra X → Brummm! Mesin motor menyala!
+
+
+   4. Cari mesin dengan performa tertinggi
+Menggunakan polimorfisme:
+   * nilaiPerforma() harus memanggil override masing-masing
+
+      5. Urutkan mesin berdasarkan performa (descending)
+Tampilkan 3 terbaik.
+
+
+
+
+OUTPUT YANG DIHARAPKAN
+=== DATA MESIN MEGATECH ===
+Mesin Motor Honda Supra X | Tipe: Bebek | Tenaga: 125 HP
+Kategori: Mesin Motor
+Performa: 150.0
+
+
+Mesin Traktor Kubota MX5200 | Tarik: 5.0 ton | Tenaga: 520 HP
+Kategori: Mesin Traktor
+Performa: 518.0
+
+
+Mesin Traktor Listrik EcoTrac Z900 | Tarik: 4.2 ton | Baterai: 70.0 kWh | Tenaga: 300 HP
+Kategori: Mesin Traktor Listrik
+Performa: 680.0
+
+
+Mesin Motor Yamaha R25 | Tipe: Sport | Tenaga: 250 HP
+Kategori: Mesin Motor
+Performa: 300.0
+
+
+Mesin Traktor Listrik Volta FarmX | Tarik: 3.5 ton | Baterai: 80.0 kWh | Tenaga: 200 HP
+Kategori: Mesin Traktor Listrik
+Performa: 620.0
+
+
+=== SUARA MESIN ===
+Brummm! Mesin motor menyala!
+GGGRRRR! Hidup Mesinnn!
+Bzzzzz! Mesin traktor listrik aktif!
+Brummm! Mesin motor menyala!
+Bzzzzz! Mesin traktor listrik aktif!
+
+
+=== MESIN PERFORMA TERTINGGI ===
+EcoTrac Z900 → 680.0
+
+
+=== TOP 3 MESIN TERBAIK ===
+1. EcoTrac Z900 → 680.0
+2. Volta FarmX → 620.0
+3. Kubota MX5200 → 518.0

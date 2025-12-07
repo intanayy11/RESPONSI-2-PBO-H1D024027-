@@ -1,0 +1,73 @@
+Bayangkan kita sedang membangun sebuah aplikasi kesehatan untuk membantu pengguna memantau kondisi tubuh mereka. Aplikasi ini akan menghitung BMI (Body Mass Index) dan memperkirakan kebutuhan kalori harian seseorang.
+Informasi yang Perlu Disimpan
+Setiap pengguna aplikasi ini memiliki tiga data pribadi yang perlu disimpan:
+
+Umur (dalam tahun) - bertipe data bilangan bulat
+Berat badan (dalam kilogram) - bertipe data bilangan desimal
+Tinggi badan (dalam centimeter) - bertipe data bilangan desimal
+
+Selain itu, aplikasi memiliki satu nilai tetap yang sangat penting yaitu faktor aktivitas dengan nilai 1.2. Nilai ini merepresentasikan tingkat aktivitas sedentary (kurang aktif) dan merupakan standar dari tim medis. Karena ini adalah standar tetap, nilai ini tidak boleh diubah oleh siapapun, sehingga harus dibuat sebagai konstanta menggunakan kata kunci khusus di Java.
+Kemampuan Aplikasi
+Aplikasi ini memiliki empat kemampuan utama:
+1. Menghitung BMI (hitungBMI)
+
+Method ini adalah fungsi yang mengembalikan nilai desimal
+Rumus: BMI = berat / (tinggiMeter × tinggiMeter)
+Catatan: tinggiMeter = tinggi / 100 (konversi dari cm ke meter)
+
+2. Menampilkan Kategori BMI (tampilKategori)
+
+Method ini adalah prosedur yang tidak mengembalikan nilai
+Kategori ditentukan berdasarkan nilai BMI:
+
+Jika BMI < 18.5 → tampilkan "Kategori: Kurus"
+Jika BMI < 25 → tampilkan "Kategori: Normal"
+Jika BMI ≥ 25 → tampilkan "Kategori: Obesitas"
+
+
+3. Menghitung Kebutuhan Kalori (hitungKalori)
+
+Method ini adalah fungsi yang mengembalikan nilai desimal
+Rumus: kalori = berat × faktorAktivitas × 10
+
+4. Menampilkan Semua Informasi (tampilInfo)
+
+Method ini adalah prosedur yang tidak mengembalikan nilai
+Tampilkan informasi berikut secara berurutan:
+
+Umur (dalam tahun)
+Berat badan (dalam kg)
+Tinggi badan (dalam cm)
+Nilai BMI (gunakan method hitungBMI)
+Kategori BMI (gunakan method tampilKategori)
+Kebutuhan kalori harian (gunakan method hitungKalori)
+
+
+Data Uji Coba
+Untuk menguji aplikasi, buatlah seorang pengguna dengan data:
+
+Umur: 25 tahun
+Berat: 60 kg
+Tinggi: 170 cm
+
+Kemudian tampilkan semua informasinya dan tunjukkan bahwa faktor aktivitas tidak bisa diubah.
+
+=== Informasi Kesehatan Pengguna ===
+Umur: 25 tahun
+Berat: 60.0 kg
+Tinggi: 170.0 cm
+BMI: 20.76
+Kategori: Normal
+Kebutuhan Kalori: 720 kal/hari
+====================================
+
+--- Demonstrasi Konstanta Final ---
+Nilai faktor aktivitas: 1.2
+Faktor aktivitas bersifat final (konstan)
+Artinya nilai ini tidak bisa diubah setelah diinisialisasi
+
+Jika kita mencoba menulis:
+p.faktorAktivitas = 1.5;
+
+Maka compiler akan menolak dengan error:
+'cannot assign a value to final variable faktorAktivitas'
